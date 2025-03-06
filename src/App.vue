@@ -2,7 +2,7 @@
 
 </script>
 <template>
-<div>我是app</div>
+<div>我是apphhhhhh</div>
 </template>
 
 <style scoped>
