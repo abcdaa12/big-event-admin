@@ -1,6 +1,6 @@
 // 和请求相关的
 import axios from 'axios'
-import { useUserStore } from '@/stores/user'
+import { useUserStore } from '@/stores/modules/user'
 const baseURL = 'http://big-event-vue-api-t.itheima.net'
 import { ElMessage } from 'element-plus'
 import router from '@/router'
