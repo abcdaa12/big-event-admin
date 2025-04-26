@@ -1,6 +1,8 @@
 // 持久化pinia
+// import { arrowMiddleware } from 'element-plus'
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import { userGetInfoService } from '@/api/user'
 // 用户模块token setToken removeToken
 export const useUserStore = defineStore(
   'big-user',
@@ -12,13 +14,25 @@ export const useUserStore = defineStore(
     const removeToken = () => {
       token.value = ''
     }
+    const user = ref({})
+    const getUser = async () => {
+      // 请求获取数据
+      const res = await userGetInfoService()
+      user.value = res.data.data
+    }
+    const setUser = (obj) => {
+      user.value = obj
+    }
     return {
       token,
       setToken,
       removeToken,
+      user,
+      getUser,
+      setUser,
     }
   },
   {
-    persist: true
-  }
+    persist: true,
+  },
 )

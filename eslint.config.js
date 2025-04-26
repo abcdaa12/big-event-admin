@@ -3,6 +3,16 @@ import pluginVue from 'eslint-plugin-vue'
 import skipFormatting from '@vue/eslint-config-prettier/skip-formatting'
 export default [
   {
+    languageOptions: {
+      // ✅ 新版格式
+      globals: {
+        ElMessage: 'readonly',
+        ElMessageBox: 'readonly',
+        ElLoading: 'readonly',
+      },
+    },
+  },
+  {
     name: 'app/files-to-lint',
     files: ['**/*.{js,mjs,jsx,vue}'],
   },

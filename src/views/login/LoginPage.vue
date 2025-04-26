@@ -4,7 +4,7 @@ import { User, Lock } from '@element-plus/icons-vue'
 import { ref, watch } from 'vue'
 import { userRegisterService, userLoginService } from '@/api/user'
 import { useUserStore } from '@/stores'
-import { ElMessage } from 'element-plus'
+// import { ElMessage } from 'element-plus'
 import { useRouter } from 'vue-router'
 const isRegister = ref(false)
 // 注册相关字段，不能自己随便起名字，要看接口文档
